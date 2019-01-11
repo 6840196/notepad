@@ -20,4 +20,12 @@ class Link < Post
 
     return [@url, @text, time_string]
   end
+
+  def file_path
+    current_path = File.dirname(__FILE__ )
+
+    file_name = "#{@text[0...25]}.txt"
+
+    return current_path + "/data/urls/" + file_name
+  end
 end

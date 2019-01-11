@@ -36,6 +36,6 @@ class Post
 
     file_name = @created_at.strftime("#{self.class.name}_%Y-%m-%d_%H-%M-%S.txt")
 
-    return current_path + "/" + file_name
+    return current_path + "/data/" + file_name
   end
 end

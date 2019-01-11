@@ -25,4 +25,12 @@ class Task < Post
 
     return [deadline, @text, time_string]
   end
+
+  def file_path
+    current_path = File.dirname(__FILE__ )
+
+    file_name = "#{@text} выполнить до - #{@due_date}.txt"
+
+    return current_path + "/data/task/" + file_name
+  end
 end
